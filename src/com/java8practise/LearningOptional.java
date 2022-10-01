@@ -5,7 +5,7 @@ import java.util.Optional;
 public class LearningOptional {
     static Integer findNumer(Integer[] listOfIntegers, Integer toBeSearched) {
         for (Integer num : listOfIntegers) {
-            if (num == toBeSearched) return num;
+            if (num.equals(toBeSearched)) return num;
         }
         return null;
     }
@@ -13,12 +13,12 @@ public class LearningOptional {
     //User Optional.of function to make a particular one as Optional
     static Optional<Integer> findNumerWithOptional(Integer[] listOfIntegers, Integer toBeSearched) {
         for (Integer num : listOfIntegers) {
-            if (num == toBeSearched) return Optional.of(num);
+            if (num.equals(toBeSearched)) return Optional.of(num);
         }
         return null;
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Integer[] inputNumbers = {1, 2, 3, 4, 5};
 
         Integer result = findNumer(inputNumbers, 5);
@@ -40,5 +40,4 @@ public class LearningOptional {
         System.out.println("resultOptional :    " + resultOptional.empty());
 
     }
-
 }

@@ -5,8 +5,8 @@ public class RunnableLambdaExample {
 
     public static void main(String[] args) {
 
-        /**
-         * prior Java 8
+        /*
+          prior Java 8
          */
         //TODO_U
         Runnable runnable = new Runnable() {

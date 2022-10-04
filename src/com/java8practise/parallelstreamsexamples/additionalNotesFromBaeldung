@@ -1,0 +1,18 @@
+3.2. Common Thread Pool
+The number of threads in the common pool is equal to the number of processor cores.
+
+However, the API allows us to specify the number of threads it will use by passing a JVM parameter:
+
+-D java.util.concurrent.ForkJoinPool.common.parallelism=4
+It's important to remember that this is a global setting and that it will affect all parallel streams and any other fork-join tasks that use the common pool. We strongly suggest that this parameter is not modified unless we have a very good reason for doing so.
+
+3.3. Custom Thread Pool
+Besides in the default, common thread pool, it's also possible to run a parallel stream in a custom thread pool:
+
+List<Integer> listOfNumbers = Arrays.asList(1, 2, 3, 4);
+ForkJoinPool customThreadPool = new ForkJoinPool(4);
+int sum = customThreadPool.submit(
+    () -> listOfNumbers.parallelStream().reduce(0, Integer::sum)).get();
+customThreadPool.shutdown();
+assertThat(sum).isEqualTo(10);
+Note that using the common thread pool is recommended by Oracle. We should have a very good reason for running parallel streams in custom thread pools.

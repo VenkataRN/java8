@@ -75,4 +75,4 @@ public class BankAccountTestParameterized {
 //     2.1: Use  @Parameterized.Parameters annotation
 //     2.2: Function has be to Static
 //Step 3: Create a constructor and build a object such that this can be passed to the test function in Step4
-
+//Step 4: Create the function and use the object and class variables

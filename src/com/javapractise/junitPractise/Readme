@@ -10,3 +10,16 @@
 - assertEquals() - uses equals() method to test for equality.
 
 - assertThat() - Compares the actual value against a matcher. Here we can compare the actual with against a range of values. support is from Junit 4.4
+
+------------------------------------------------------------------------------------------------------------
+Check BankAccountTestParamerized.java for implementation example
+
+Writing Parameterized JUNIT Test, below are the steps
+Step 1: Declare annotation of @Runwith(Parameterized.class)
+Step 2: Delcare Array of input parameters for the function that you are planning to test.
+     2.1: Use  @Parameterized.Parameters annotation
+     2.2: Function has be to Static
+Step 3: Create a constructor and build a object such that this can be passed to the test function in Step4
+Step 4: Create the function and use the object and class variables
+
+------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,12 @@
+- assertArrayEquals() - to verify the alue of an array. This considers two arrays equal when their lengths are the same and every element in both arrays is the same including order.
+- assertEquals() -  This method wont work for an array , because it will only consider two arrays equal if they are the same instance.
+
+
+- assertNull()/assertNotNull() -> Prefer these to check nulls than using assertTrue and assertFalse to check nulls as this increases intention/readability
+
+
+
+- assertSame()/assertNotSame() - use to check whether two instance are the exact same instance. compares the object references
+- assertEquals() - uses equals() method to test for equality.
+
+- assertThat() - Compares the actual value against a matcher. Here we can compare the actual with against a range of values. support is from Junit 4.4

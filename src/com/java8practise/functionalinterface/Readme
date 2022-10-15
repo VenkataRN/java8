@@ -1,0 +1,9 @@
+Consumer and BiConsumer -> Will take arguments but not return any as accept() function in this functional Interface is of type void.
+ - argguments will be sent using accept() method
+ - Can chain with andThen
+
+ =======================================
+
+ Predicate -> Will return boolean.
+  - use .test() method to send arguments to predicate
+  - Can chain with and, or,negate

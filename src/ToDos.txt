@@ -1,0 +1,4 @@
+- Bean Scopes
+- Custom Sorting of Objects using collections.sort
+- Custome Sorting combining groupwise.. like (Deptwise Sort  + in Each Department Employee name sort)
+https://stackoverflow.com/questions/5245093/how-do-i-use-comparator-to-define-a-custom-sort-order

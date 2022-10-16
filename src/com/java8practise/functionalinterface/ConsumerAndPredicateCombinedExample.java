@@ -3,11 +3,14 @@ package com.java8practise.functionalinterface;
 import com.java8practise.data.Student;
 import com.java8practise.data.StudentDataBase;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.function.BiConsumer;
 import java.util.function.Predicate;
 
 public class ConsumerAndPredicateCombinedExample {
+
     static Predicate<Student> checkGpaAbove3Predicate = (student -> student.getGpa() > 3);
 
     static Predicate<Student> checkGradeAbove3Predicate = (student -> student.getGradeLevel() > 3);

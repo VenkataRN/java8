@@ -1,0 +1,14 @@
+- Using optional reduces  NullPointerException and also null checks.
+- Optional.of(null); expects non null value , passing null like this gives runtime exception
+- Optional.ofNullable converts a class to Optional of that type of class. Below converts a String to Optional<String>
+    ex:         Optional<String> studentOptional = Optional.ofNullable("StringToConvertedToOptionalString");
+
+
+
+
+TODO:
+1)
+    When called as below return is expected as Optional<String>
+      String name = studentOptional.map(Student::getName);
+    but when chaining with .orElse compiler wont complain about this error? Why
+      String name = studentOptional.map(Student::getName).orElse("Default");

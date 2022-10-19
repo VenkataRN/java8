@@ -11,6 +11,13 @@ public class StudentDataBase {
         return new Student("Adam", 2, 4.0, "male", Arrays.asList("swimming", "basketball", "volleyball"));
     };
 
+    public static Supplier<Student> studentSupplierWithBike = () -> {
+        Bike bike = new Bike("Yamaha", "Rx100");
+        Student student = new Student("Adam", 2, 4.0, "male", Arrays.asList("swimming", "basketball", "volleyball"));
+        student.setBike(Optional.ofNullable(bike));
+        return student;
+    };
+
     public static Optional<Student> getOptionalStudent() {
 
         Student student = new Student("Adam", 2, 4.0, "male", Arrays.asList("swimming", "basketball", "volleyball"));

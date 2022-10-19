@@ -108,6 +108,8 @@ public class Student {
                 ", gradeLevel=" + gradeLevel +
                 ", gpa=" + gpa +
                 ", gender='" + gender + '\'' +
+                ", noteBooks=" + noteBooks +
+                ", bike=" + bike +
                 ", activities=" + activities +
                 '}';
     }

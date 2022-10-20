@@ -1,4 +1,4 @@
-package com.java8practise;
+package com.java8practise.optional;
 
 import java.util.Optional;
 

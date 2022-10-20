@@ -12,6 +12,8 @@ public class ImmutableAndMutableListExample {
         final List<Student> studentList = StudentDataBase.getAllStudents();
         System.out.println(studentList);
         Comparator<Student> comparator = (thisObj, otherObj) ->  thisObj.getName().compareTo(otherObj.getName());
+        //  The above line can also be written as below
+        //  Comparator<Student> comparatorOne = Comparator.comparing(Student::getName);
         studentList.sort(comparator);
         System.out.println(studentList);
         //Even we declare List as final above, we can change the contents inside the list

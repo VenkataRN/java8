@@ -11,3 +11,6 @@ static methods of an interface can't be overriden.
 Having default methods also gives flexibility to call
 default functions from the class which implements the interface with default function
 
+---
+
+Testing from Eclipse GUI Now

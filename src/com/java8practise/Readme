@@ -1,0 +1,16 @@
+Comparable vs Comparator:
+
+a)  While using Comparable:
+
+	- Class to extend Comparable<SameClass> interface
+	- implement compareTo function
+	- implement hashCode()
+	- implement equals(Object o) function  (Can use Objects.hash(class-members) to generate unique hash)
+	    --- Here Check o is this, if so return false
+	    --- Check whether o is null or o == this.getClass(), if so return false
+	    --- if not case the o to current class and compare the interested elements towards equality
+    - Will call automatially when we call Collections.sort(listOfObjects) Ex: Collections.sort(studentList);
+
+
+b) Comparator is a Functional Interface   
+   - Will be called with User List Object.sort(); Eg: studentList.sort(comparator);  

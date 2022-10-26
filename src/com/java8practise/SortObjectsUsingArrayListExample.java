@@ -1,10 +1,12 @@
 package com.java8practise;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 
-class Fruit {
+class Fruit implements Comparable<Fruit> {
 	Integer rollNum;
 	String  name;
 	
@@ -27,8 +29,31 @@ class Fruit {
 	}
 	@Override
 	public String toString() {
-		return "Student [rollNum=" + rollNum + ", name=" + name + "]";
+		return "Fruit [rollNum=" + rollNum + ", name=" + name + "]";
 	}
+	
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == this) return false;
+		if (obj == null || obj.getClass() != this.getClass()) return false;
+		Fruit fruit = (Fruit) obj;
+		return this.rollNum == fruit.getRollNum();
+		
+	}
+	
+	@Override
+	public int hashCode() {
+		//Objects.hash(this)
+		return Objects.hash(name+rollNum);
+	}
+	@Override
+	public int compareTo(Fruit o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 	
 };
 
@@ -37,8 +62,8 @@ public class SortObjectsUsingArrayListExample {
 		List<Fruit> fruitList = new ArrayList<>();
 		
 		fruitList.add(new Fruit(1, "Apple"));
-		fruitList.add(new Fruit(2, "Orange"));
-		fruitList.add(new Fruit(31, "Pineapple"));
+		fruitList.add(new Fruit(2, "Pineapple"));
+		fruitList.add(new Fruit(31, "Orange"));
 		fruitList.add(new Fruit(4, "Grape"));
 		
 		Comparator<Fruit> fruitComparator = (f1,f2)-> { return f1.getRollNum() - f2.getRollNum(); };
@@ -58,6 +83,11 @@ public class SortObjectsUsingArrayListExample {
 		
 		fruitList.sort(Comparator.comparing(Fruit::getName));		
 		System.out.println(fruitList );
+		
+		//or
+		System.out.println("Using compareTo feature ");
+		Collections.sort(fruitList);
+		System.out.println(fruitList);
 		
 	}
 

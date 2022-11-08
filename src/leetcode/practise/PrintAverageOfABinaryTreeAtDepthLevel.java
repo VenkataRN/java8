@@ -1,6 +1,5 @@
 package leetcode.practise;
 
-import java.util.List;
 import java.util.LinkedList;
 
 class TreeNode{
@@ -11,7 +10,7 @@ class TreeNode{
 	TreeNode(int i){
 		this.val = i;
 	}
-}
+};
 
 public class PrintAverageOfABinaryTreeAtDepthLevel {
 	
@@ -55,6 +54,26 @@ public class PrintAverageOfABinaryTreeAtDepthLevel {
 		
 		average(root);
 			
-	}
+	  }
 
 }
+
+
+/*
+
+given a Tree
+      3
+    /	\
+   9     28
+   		/  \	
+   	   15	7
+   	   
+   	   
+ Write a program to print average of the binary tree at each depth.
+ 
+ Approach is: use BFS . 
+   
+   
+
+*/
+

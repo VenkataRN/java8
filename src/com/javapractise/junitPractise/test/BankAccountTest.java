@@ -20,6 +20,7 @@ public class BankAccountTest {
         Assert.assertEquals(1100, bankAccount.getBalance(), 0);
     }
 
+    
     @org.junit.Test
     public void wihtdraw() {
         BankAccount bankAccount = new BankAccount("firstName1", "lastName1", 1000, BankAccount.CHECKING);

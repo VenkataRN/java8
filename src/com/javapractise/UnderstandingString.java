@@ -1,4 +1,4 @@
-package com.javapractise.junitPractise.src;
+package com.javapractise;
 
 public class UnderstandingString {
     public static void main(String[] args) {

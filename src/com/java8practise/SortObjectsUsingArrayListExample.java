@@ -43,15 +43,15 @@ class Fruit implements Comparable<Fruit> {
 		
 	}
 	
-	@Override
-	public int hashCode() {
-		//Objects.hash(this)
-		return Objects.hash(name+rollNum);
-	}
+//	@Override
+//	public int hashCode() {
+//		//Objects.hash(this)
+//		return Objects.hash(name+rollNum);
+//	}
 	@Override
 	public int compareTo(Fruit o) {
 		// TODO Auto-generated method stub
-		return 0;
+		return 1;
 	}
 
 	
@@ -92,3 +92,27 @@ public class SortObjectsUsingArrayListExample {
 	}
 
 }
+
+
+/*
+
+[Fruit [rollNum=1, name=Apple], Fruit [rollNum=2, name=Pineapple], Fruit [rollNum=4, name=Grape], Fruit [rollNum=31, name=Orange]]
+[Fruit [rollNum=1, name=Apple], Fruit [rollNum=2, name=Pineapple], Fruit [rollNum=4, name=Grape], Fruit [rollNum=31, name=Orange]]
+[Fruit [rollNum=1, name=Apple], Fruit [rollNum=4, name=Grape], Fruit [rollNum=31, name=Orange], Fruit [rollNum=2, name=Pineapple]]
+Using compareTo feature 
+[Fruit [rollNum=1, name=Apple], Fruit [rollNum=4, name=Grape], 
+Fruit [rollNum=31, name=Orange], Fruit [rollNum=2, name=Pineapple]]
+
+
+//When Fruits.CompareTo returns 0
+Using compareTo feature 
+[Fruit [rollNum=2, name=Pineapple], Fruit [rollNum=31, name=Orange], 
+Fruit [rollNum=4, name=Grape], Fruit [rollNum=1, name=Apple]]
+
+//When Fruits.CompareTo returns 1
+Using compareTo feature 
+[Fruit [rollNum=1, name=Apple], Fruit [rollNum=4, name=Grape], 
+Fruit [rollNum=31, name=Orange], Fruit [rollNum=2, name=Pineapple]]
+
+
+*/

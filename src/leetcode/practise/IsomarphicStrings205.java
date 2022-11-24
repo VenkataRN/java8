@@ -21,7 +21,7 @@ class Solution205 {
 			
 			if (hashMap.containsKey(sKey) && hashMap.containsKey(tKey)) {
 				if (hashMap.get(sKey) == tKey && hashMap.get(tKey) == sKey) {
-					continue;
+					continue; 
 				}
 				else
 					return false;
